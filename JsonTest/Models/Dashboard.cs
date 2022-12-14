@@ -9,5 +9,5 @@ public class Dashboard
     public string Name { get; set; }
 
     [JsonPropertyName("users")]
-    public Dictionary<string, UserInfo>[] Users { get; set; }
+    public List<Dictionary<string, UserInfo>> Users { get; set; }
 }
