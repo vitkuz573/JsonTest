@@ -21,12 +21,9 @@ public partial class MainWindow : Window
 
         var dashboard = JsonSerializer.Deserialize<Dashboard>(jsonString);
 
-        foreach (var users in dashboard.Users)
+        foreach (var user in dashboard.Users)
         {
-            foreach (var user in users)
-            {
-                MessageBox.Show(user.Value.Name);
-            }
+            MessageBox.Show(user.Value.Name);
         }
     }
 }
